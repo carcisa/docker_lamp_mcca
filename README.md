@@ -112,7 +112,7 @@ usuario:contraseña
 La constraseña se puede generar con la utilidad de apache2-utils o directamente usando un [generador online](https://hellotools.org/es/generar-cifrar-contrasena-para-archivo-htpasswd)
 
 ##### Añadí un usuario con mi nombre y contraseña cifrados
-![img Usuario y password](docs\images\Usuario_pass_cifrados_htpasswrd.jpg)
+![img Usuario y password](docs/images/Usuario_pass_cifrados_htpasswrd.jpg)
 
 ## Construir las Imágenes
 
