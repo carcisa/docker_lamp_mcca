@@ -123,7 +123,7 @@ docker-compose build
 ```
 
 ##### Construyendo la imagen 
-![img dockerfile ](docs\images\construir_imagen.jpg)
+![img dockerfile ](docs/images/construir_imagen.jpg)
 
 
 ## Iniciar los Contenedores
@@ -135,7 +135,7 @@ docker-compose up -d
 ```
 
 ##### Creando los contenedores
-![img contenedores ](docs\images\Creando_contenedores.jpg)
+![img contenedores ](docs/images/Creando_contenedores.jpg)
 
 ## Comprobaciones de Prueba
 
@@ -151,32 +151,32 @@ Lanzar el comando que crea un usuario llamado usuario2 y pedirá que se introduz
 htpasswd /etc/apache2/.htpasswd usuario2
 ```
 ##### Creación del nuevo usuario
-![img nuevo usuario ](docs\images\Nuevo_usuario.jpg)
+![img nuevo usuario ](docs/images/Nuevo_usuario.jpg)
 
 ### Prueba de los servicios:
 Para probar si los servicios están funcionando correctamente, acceder a los siguientes enlaces a través del navegador:
 
 - **Prueba del sitio principal**: [http://localhost](http://localhost)
 ##### Localhost
-![img localhost](docs\images\localhost.jpg)
+![img localhost](docs/images/localhost.jpg)
   
 - **Prueba de la intranet**: [http://localhost:8060 (usando usuario1 y contraseña:123456789 o el usuario creado en el paso anterior)](http://localhost:8060)
 ##### Intranet
-![img intranet](docs\images\intranet01.jpg)
-![img intranet](docs\images\intranet02.jpg)
+![img intranet](docs/images/intranet01.jpg)
+![img intranet](docs/images/intranet02.jpg)
 
 - **Prueba de PHP Info**: [http://localhost/phpinfo.php](http://localhost/phpinfo.php)
 ##### PhpInfo
-![img PhpInfo](docs\images\phpInfo.jpg)
+![img PhpInfo](docs/images/phpInfo.jpg)
   
 - **Prueba de Conexión a la Base de Datos**: [http://localhost/test-bd.php](http://localhost/test-bd.php)
 ##### BBDD
-![img BBDD](docs\images\bd.jpg)
+![img BBDD](docs/images/bd.jpg)
 
 - **Prueba de phpmyadmin**: [http://localhost:8080 (con el usuario root y la contraseña establecida)](http://localhost:8080)
 ##### PHPMYADMIN
-![img PHPMYADMIN](docs\images\php.jpg)
-![img PHPMYADMIN](docs\images\php02.jpg)
+![img PHPMYADMIN](docs/images/php.jpg)
+![img PHPMYADMIN](docs/images/php02.jpg)
 
 ## Detener los Contenedores
 Para detener y eliminar los contenedores:
@@ -199,11 +199,11 @@ Hay que modificar el fichero **/etc/hosts** del sistema operativo anfitrión (no
 127.0.0.1	intranet.local
 ```
 ##### Fichero para añadir los nombres /etc/hosts
-![img hosts](docs\images\cambiodeNombreHost.jpg)
+![img hosts](docs/images/cambiodeNombreHost.jpg)
 
 
 ##### Instalación de wordpress en localhost
-![img wordpress](docs\images\instalación_wordpress.jpg)
+![img wordpress](docs/images/instalación_wordpress.jpg)
 
 
 
@@ -221,7 +221,7 @@ mkdir certs
 cd certs
 ```
 ##### Añadir directorio nuevo a la raiz
-![img certs](docs\images\directorio_certs.jpg)
+![img certs](docs/images/directorio_certs.jpg)
 
 Lanzar el comando de generación de certificados de openssl:
 
@@ -243,7 +243,7 @@ Durante el proceso, se piden detalles como país, estado, organización, etc.
 Para Common Name (Introducir el nombre del dominio www.local, intranet.local).
 
 ##### Rellenar datos de configuración
-![img datos](docs\images\rellenarDatos.jpg)
+![img datos](docs/images/rellenarDatos.jpg)
 
 
 ### Configurar Virtual Host 443
@@ -267,8 +267,8 @@ En cada archivo de configuración agregar una regla como esta replicando la conf
 ```
 
 ##### Añado las reglas de configuracion
-![img config](docs\images\añadossl01.jpg)
-![img config](docs\images\añadossl02.jpg)
+![img config](docs/images/añadossl01.jpg)
+![img config](docs/images/añadossl02.jpg)
 
 ### Habilitar el módulo mod_ssl
 
@@ -285,30 +285,30 @@ Además se debe habilitar el módulo ssl, para ello agregar la siguiente línea:
 RUN a2enmod ssl
 ```
 ##### Añado la configuracion de Dockerfile
-![img dockerfile](docs\images\dockerfile.jpg)
+![img dockerfile](docs/images/dockerfile.jpg)
 
 ## (Opcional) Configuración
 Para acceder a las urls configuradas en los virtual host:
 - **Sitio Principal**: [https://www.local](https://www.local)
   
 ##### www.local
-![img local](docs\images\www.local.jpg)
+![img local](docs/images/www.local.jpg)
 
 
 - **Intranet**: [https://intranet.local (usando usuario1 y contraseña:123456789 o el usuario creado en el paso anterior)](https://intranet.local)
   
 ##### intranet.local
-![img no_seguro](docs\images\NoPrivi.jpg)
-![img intranet](docs\images\intranet_ssl.jpg)
+![img no_seguro](docs/images/NoPrivi.jpg)
+![img intranet](docs/images/intranet_ssl.jpg)
 
 - **PHP Info**: [https://www.local/phpinfo.php](https://www.local/phpinfo.php)
   
 ##### PhpInfo
-![img no_seguro](docs\images\no_seguro_php.jpg)
-![img php](docs\images\phpInfo.jpg)
+![img no_seguro](docs/images/no_seguro_php.jpg)
+![img php](docs/images/phpInfo.jpg)
 
 
 - **Conexión a la Base de Datos**: [https://www.local/test-bd.php](https://www.localtest-bd.php)
 ##### Localtest bd
-![img bd local](docs\images\bd_test_sql.jpg)
+![img bd local](docs/images/bd_test_sql.jpg)
 
